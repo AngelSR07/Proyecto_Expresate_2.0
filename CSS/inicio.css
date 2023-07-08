@@ -1,0 +1,378 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Roboto', 'Sans serif';
+    background: rgb(81,56,192);
+    color: white;
+
+}
+
+
+
+.contenedor{
+    width: 90%;
+    height: 100vh;
+    max-width: 1400px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+
+.banner_title h1{
+    font-size: 120px;
+    font-weight: 800px;
+    margin-bottom: 20px;
+}
+
+
+
+.banner_title h2{
+    font-size: 25px;
+    font-weight: 800px;
+    margin-bottom: 80px;
+}
+
+
+
+.buttonIndex{
+    background: linear-gradient(102deg, #E3A400 40%, #C49009 60%);
+    color: white;
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: .25rem;
+    min-width: 200px;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, .5);
+    animation: pulse 1.5s infinite;
+
+    cursor: pointer;
+
+    font-size: 25px;
+}
+
+
+@keyframes pulse {
+    0%{
+        transform: scale(.99);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, .1);
+    }
+
+    70%{
+        transform: scale(1);
+        box-shadow: 0 0 0 25px rgba(255, 255, 255, 0);
+    }
+
+    100%{
+        transform: scale(.99);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+
+
+
+
+.banner_img img{
+    border-radius: 50%;
+    border: 3px solid black;
+}
+
+.banner_img{
+    animation: movimiento 2.5s linear infinite;
+}
+
+@keyframes movimiento{
+    0%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(60px);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
+@media (max-width:930px){
+    .contenedor{
+        flex-direction: column;
+
+        height: 90vh;
+    }
+
+    .banner_img img{
+        width: 350px;
+        height: 300px;
+    }
+
+    .banner_title h1{
+        font-size: 110px;
+        font-weight: 800px;
+    }
+
+}
+
+
+
+
+
+@media (max-width:600px){
+    .contenedor{
+        flex-direction: column;
+
+        height: 90vh;
+    }
+
+    .banner_img img{
+        width: 350px;
+        height: 300px;
+    }
+
+    .banner_title h1{
+        font-size: 80px;
+        font-weight: 800px;
+    }
+
+}
+
+
+
+
+@media (max-width:420px){
+    .contenedor{
+        flex-direction: column;
+
+        height: 90vh;
+    }
+
+    .banner_img img{
+        width: 350px;
+        height: 300px;
+    }
+
+    .banner_title h1{
+        font-size: 50px;
+        font-weight: 800px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+/*
+=========================================================
+======================== POPUP ==========================
+=========================================================
+*/
+
+.overlay{
+    background: rgba(0, 0, 0, .3);
+
+    position: fixed;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: black;
+
+    visibility: hidden;
+}
+
+
+.overlay.active{
+    visibility: visible;
+}
+
+
+
+.popup{
+    background: #f8f8f8; 
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+
+    border-radius: 3px; 
+    padding: 20px;
+    text-align: center;
+    width: 600px;
+
+    transition: .3s ease all;
+    transform: scale(0.7);
+    opacity: 0;
+}
+
+.popup .btn-cerrar-popup{
+    font-size: 16px;
+    line-height: 16px;
+
+    display: block;
+    text-align: right;
+
+    color: #BBBBBB;
+    transition: .3s ease all;
+}
+
+.popup .btn-cerrar-popup:hover{
+    color: #000;
+}
+
+
+.popup h3{
+    font-size: 36px;
+    font-weight: 600;
+
+    margin-bottom: 10px;
+
+    opacity: 0;
+}
+
+
+.popup h4{
+    font-size: 26px;
+    font-weight: 300;
+
+    margin-bottom: 40px;
+
+    opacity: 0;
+}
+
+
+.popup .contenedor-inputs{
+    opacity: 0;
+}
+
+
+
+.popup .contenedor-inputs input{
+    width: 100%;
+    margin-bottom: 20px;
+    height: 52px;
+    line-height: 52px;
+
+    font-size: 18px;
+    text-align: center;
+
+    border: 1px solid #BBBBBB;
+}
+
+.popup .contenedor-inputs select{
+    width: 100%;
+    margin-bottom: 20px;
+    height: 52px;
+    line-height: 52px;
+
+    font-size: 18px;
+    text-align: center;
+
+    border: 1px solid #BBBBBB;
+}
+
+
+.popup .btn-form{
+    text-decoration: none;
+
+    padding: 1rem 2rem;
+    height: 40px;
+    line-height: 40px;
+
+    border: none;
+    color: #fff;
+    background: #5E7DE3;
+
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+
+    transition: .3s ease all;
+}
+
+.popup .btn-form:hover{
+    background: rgba(94, 125, 227, .9);
+}
+
+
+
+
+/*
+=========================================================
+================ ANIMACIONES - POPUP ====================
+=========================================================
+*/
+.popup.active{
+    opacity: 1;
+    transform: scale(1); 
+}
+
+.popup.active h3{
+    animation: entradaTitulo 1.5s ease .5s forwards;
+}
+
+.popup.active h4{
+    animation: entradaSubTitulo 1.5s ease .5s forwards;
+}
+
+.popup.active .contenedor-inputs{
+    animation: entradaInputs 2s ease 1.5s forwards;
+}
+
+
+
+@keyframes entradaTitulo{
+    from{
+        transform: translateY(-25px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+@keyframes entradaSubTitulo{
+    from{
+        transform: translateY(25px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+@keyframes entradaInputs{
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}

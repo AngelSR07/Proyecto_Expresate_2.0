@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/programa.css">
+
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+
+    <title>Expresate</title>
+</head>
+
+<body>
+
+    <header>
+        <input type="checkbox" id="btn-menu">
+        <label for="btn-menu"><i class="fas fa-bars"></i>&nbsp;&nbsp;Menú</label>
+
+        <nav class="menu">
+            <ul>
+                <li class="blocked">
+                    <a href="#">
+                        <i class="fas fa-home"></i>&nbsp;&nbsp;<u>Inicio</u>
+                    </a>
+                </li>
+                <li><a onclick="cambiarPag_SobreMi()">Sobre mi</a></li>
+                <li><a onclick="cambiarPag_Personas()">Personas</a></li>
+                <li><a onclick="cambiarPag_Numeros()">Números</a></li>
+                <li><a onclick="cambiarPag_Cuerpos()">Cuerpo</a></li>
+                <li><a onclick="cambiarPag_Siento()">¿Cómo me siento?</a></li>
+                <li>
+                    <a href="formulario.html">
+                        <i class="fas fa-cogs"></i>&nbsp;&nbsp;Configuración
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="cuerpo">
+        <div class="text-area" id="area">
+
+        </div>
+
+        <div class="botones">
+            <div class="btn-variable">
+                <div class="btn-centrar">
+                    <div class="group1">
+                        <button class="boton-menu" onclick="cambiarPag_SobreMi()" value="sobre-mi">
+                            <img src="IMG/MenuPrincipal/sobreMi.png">
+                            <h1>Sobre Mi</h1>
+                        </button>
+
+                        <button class="boton-menu" onclick="cambiarPag_Personas()" value="personas">
+                            <img src="IMG/MenuPrincipal/personas.png">
+                            <h1>Personas</h1>
+                        </button>
+
+                        <button class="boton-menu" onclick="cambiarPag_Numeros()" value="numeros">
+                            <img src="IMG/MenuPrincipal/numeros.png">
+                            <h1>Números</h1>
+                        </button>
+                    </div>
+
+                    <div class="group1">
+                        <button class="boton-menu" onclick="cambiarPag_Cuerpos()" value="cuerpo">
+                            <img src="IMG/MenuPrincipal/cuerpo.png">
+                            <h1>Cuerpo</h1>
+                        </button>
+
+                        <button class="boton-menu" onclick="cambiarPag_Siento()" value="como-me-siento">
+                            <img src="IMG/MenuPrincipal/comoMeSiento.png">
+                            <h1>¿Cómo me siento?</h1>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-fijo">
+                <button onclick="leerMensaje()">
+                    <img src="IMG/leer.png">
+                    <h1>Leer</h1>
+                </button>
+
+                <button onclick="borrar()">
+                    <img src="IMG/borrarTexto.png">
+                    <h1>Borrar</h1>
+                </button>
+
+                <button onclick="borrarTodoMsj()">
+                    <img src="IMG/deleteAll.png">
+                    <h1>Borrar Todo</h1>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="JS/mensaje.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/programa.css">
+
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+
+    <title>Expresate</title>
+</head>
+
+<body>
+
+    <header>
+        <input type="checkbox" id="btn-menu">
+        <label for="btn-menu"><i class="fas fa-bars"></i>&nbsp;&nbsp;Menú</label>
+
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a onclick="cambiarPag()">
+                        <i class="fas fa-home"></i>&nbsp;&nbsp;Inicio
+                    </a>
+                </li>
+                <li><a onclick="cambiarPag_SobreMi()">Sobre mi</a></li>
+                <li class="blocked"><a href="#"><u>Personas</u></a></li>
+                <li><a onclick="cambiarPag_Numeros()">Números</a></li>
+                <li><a onclick="cambiarPag_Cuerpos()">Cuerpo</a></li>
+                <li><a onclick="cambiarPag_Siento()">¿Cómo me siento?</a></li>
+                <li>
+                    <a href="formulario.html">
+                        <i class="fas fa-cogs"></i>&nbsp;&nbsp;Configuración
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="cuerpo">
+
+        <div class="text-area" id="area">
+
+        </div>
+
+        <div class="botones">
+            <div class="btn-variable">
+
+                <div class="btn-centrar">
+                    <div class="group1">
+                        <button id="volver" class="boton-menu" onclick="cambiarPag()" value="volver">
+                        </button>
+
+                        <button id="btnMsj" onclick="mensaje('IMG/Personas/mama.png','Mamá')">
+                            <img src="IMG/Personas/mama.png">
+                            <h1>Mamá</h1>
+                        </button>
+
+                        <button id="btnMsj" onclick="mensaje('IMG/Personas/papa.png','Papá')">
+                            <img src="IMG/Personas/papa.png">
+                            <h1>Papá</h1>
+                        </button>
+
+                    </div>
+
+                    <div class="group1">
+                        <button id="btnMsj" onclick="mensaje('IMG/Personas/hermano.png','Hermano')">
+                            <img src="IMG/Personas/hermano.png">
+                            <h1>Hermano</h1>
+                        </button>
+
+                        <button id="btnMsj" onclick="mensaje('IMG/Personas/hermana.png','Hermana')">
+                            <img src="IMG/Personas/hermana.png">
+                            <h1>Hermana</h1>
+                        </button>
+
+                        <button id="btnMsj" onclick="mensaje('IMG/Personas/amigo.png','Amigo')">
+                            <img src="IMG/Personas/amigo.png">
+                            <h1>Amigo</h1>
+                        </button>
+                    </div>
+
+                    <div class="group1">
+                        <button id="btnMsj" onclick="mensaje('IMG/Personas/amiga.png','Amiga')">
+                            <img src="IMG/Personas/amiga.png">
+                            <h1>Amiga</h1>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <div class="btn-fijo">
+                <button onclick="leerMensaje()">
+                    <img src="IMG/leer.png">
+                    <h1>Leer</h1>
+                </button>
+
+                <button onclick="borrar()">
+                    <img src="IMG/borrarTexto.png">
+                    <h1>Borrar</h1>
+                </button>
+
+                <button onclick="borrarTodoMsj()">
+                    <img src="IMG/deleteAll.png">
+                    <h1>Borrar Todo</h1>
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="JS/mensaje.js"></script>
+
+</body>
+
+</html>

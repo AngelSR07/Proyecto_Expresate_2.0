@@ -1,0 +1,425 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #C4C4C4;
+}
+
+
+
+
+/*
+===================================================
+====================== BARRA ======================
+===================================================
+*/
+header{
+    width: 100%;
+    background-color: white;
+}
+
+
+#btn-menu{
+    display: none;
+}
+
+
+header label{
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    height: 5ch;
+
+    font-weight: bold;
+    font-size: 30px;
+    color: black;
+
+    border: 3px solid black;
+}
+
+header label:hover{
+    cursor: pointer;
+
+    color: black;
+    font-style: italic;
+
+    background: rgba(0, 0, 0, 0.1);
+}
+
+
+.menu ul{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+
+    display: flex;
+
+    border-bottom: 3px solid black;
+
+}
+
+
+.menu li{
+    text-align: center;
+
+    flex-grow: 1;
+
+    border-right: 3px solid black;
+}
+
+
+
+.menu li:hover{
+    cursor: pointer;
+
+    background: rgb(102, 102, 102);
+    font-style: italic;
+}
+
+
+.menu li a{
+    display: block;
+    padding: 15px 20px;
+
+    font-weight: bold;
+
+    color: black;
+
+    text-decoration: none;
+}
+
+.menu li a:hover{
+    color: white;
+}
+
+.menu .blocked a{
+    color: rgb(106,35,221); 
+    font-style: italic; 
+    cursor: default; 
+    pointer-events: none;
+}
+
+.menu .blocked:hover{
+    cursor: default;
+    background-color: white;
+}
+
+/*
+===================================================
+===================================================
+*/
+
+
+
+
+
+
+
+
+
+/*
+===================================================
+====================== CUERPO =====================
+===================================================
+*/
+.cuerpo{
+    display: flex;
+
+    width: 100%;
+    flex-direction: column;
+}
+
+
+.text-area{
+    margin: 10px 0px;
+
+    border: 3px solid black;
+    height: 200px;
+
+    background-color: white;
+
+    display: flex;
+
+    overflow: hidden;
+    overflow-x: auto;
+
+    padding: 20px;
+}
+
+.text-area .mensaje{
+
+    min-width: 700px;
+    max-height: 50px;
+    height: 10px;
+
+    line-height: 30px;
+
+    text-align: center;
+
+    margin-right: 5px;
+}
+
+.mensaje img{
+    width: 100px;
+    height: 100px;
+}
+
+
+
+.botones{
+    display: flex;
+}
+
+
+
+.btn-variable{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.group1{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+.group1 a{
+    text-decoration: none;
+}
+
+
+
+.btn-variable button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: 40px;
+    padding: 15px 0px 0px 0px;
+
+    width: 300px;
+    border: 3px solid black;
+    border-radius: 20px;
+
+    background-color: rgb(199,181,120);
+}
+
+
+#volver{
+    background: url(../IMG/volver.jpeg);
+    background-repeat: no-repeat;
+    background-size: 315px 190px;
+    background-position: center;
+
+    height: 180px;
+    width: 300px;
+
+    border: none;
+}
+
+
+.btn-variable button:hover{
+    cursor: pointer;
+    background-color: rgb(113,103,68);
+}
+
+
+
+.btn-variable button:active{
+    background-color: rgb(174,158,106);
+    transform: scale(.95);  /* ERROR DE BOTON */
+}
+
+.btn-variable img{
+    width: 100px;
+    height: 100px;
+
+    border: 2px solid black;
+}
+
+
+.btn-fijo{
+    width: 30%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+.btn-fijo button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: 40px;
+    padding: 15px 0px 0px 0px;
+
+    width: 300px;
+    border: 3px solid black;
+    border-radius: 20px;
+
+    background-color: rgb(255,255,255);
+}
+
+
+.btn-fijo button:hover{
+    cursor: pointer;
+    background-color: rgb(124,124,124);
+}
+
+
+
+.btn-fijo button:active{
+    background-color: rgb(244,244,244);
+    transform: scale(.95);
+}
+
+.btn-fijo img{
+    width: 100px;
+    height: 100px;
+}
+
+/*
+===================================================
+===================================================
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:930px){
+    body{
+        max-width: 930px;
+    }
+
+    header{
+        position: fixed;
+
+        margin-top: -90px;
+        z-index: 1000;
+    }
+
+    .text-area{
+        height: 250px;
+    }
+
+    .area-fijada{
+        position: fixed;
+        z-index: 100;
+        top: 80;
+
+        width: 100%;
+
+        margin: 10px 0px;
+    }
+
+    .text-area .mensaje{
+
+        min-width: 400px;
+        max-height: 80px;
+    
+        text-align: center;
+    
+    }
+
+    .cuerpo{
+        margin-top: 90px;
+    }
+
+    header label{
+        display: flex;
+    }
+
+    .menu{
+        position: absolute;
+        background: white;
+
+        width: 100%;
+        margin-left: -100%;
+        transition: all 1s;
+    }
+
+    .menu ul{
+        flex-direction: column;
+        border: none;
+    }
+
+    .menu li{
+        border: none;
+        border-bottom: 2px solid black;
+    }
+
+    #btn-menu:checked ~ .menu{
+        margin: 0;
+    }
+
+    .botones{
+        flex-direction: column;
+    }
+
+
+    .btn-variable{
+        width: 100%;
+    }
+    
+    
+    .btn-fijo{
+        width: 100%;
+    }
+
+
+    .group1{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
+
+
+
+
+body::-webkit-scrollbar{
+    width: 15px;
+    z-index: 1000;
+}
+
+
+body::-webkit-scrollbar-thumb{
+    background-color: rgb(199,181,120);
+    border-radius: 5px;
+    border: 2px solid black;
+    
+    z-index: 1000;
+}
+
+
+.text-area::-webkit-scrollbar{
+    width: 10px;
+    z-index: 1000;
+}
+
+
+.text-area::-webkit-scrollbar-thumb{
+    background-color: rgb(199,181,120);
+    border-radius: 5px;
+    border: 2px solid black;
+    z-index: 1000;
+}

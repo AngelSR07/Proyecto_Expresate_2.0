@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/inicio.css">
+
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+
+    <title>Expresate</title>
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="banner_img">
+            <img src="IMG/bienvenida.png">
+        </div>
+
+        <div class="banner_title">
+            <h1>Bienvenidos</h1>
+
+            <h2>"Presione el botón <u><b>comenzar</b></u> para ir al menú principal"</h2>
+
+            <a class="buttonIndex" onclick="abrirForm();">Comenzar</a>
+        </div>
+    </div>
+
+
+    <div class="formulario">
+        <div class="overlay" id="overlay">
+            <div class="popup" id="popup">
+                <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup" onclick="cerrarForm()"><i
+                        class="fas fa-times"></i></a>
+
+                <h3>Bienvenidos a <i>Expresate</i></h3>
+                <h4>Ingrese sus datos por favor.</h4>
+
+                <form>
+                    <div class="contenedor-inputs">
+                        <input type="text" id="nomU" placeholder="Nombres" required>
+                        <input type="text" id="apeU" placeholder="Apellidos" required>
+                        <select id="depaU" placeholder="Departamento" required>
+                            <option value="" selected disabled>Elige un departamento</option>
+                            <option value="Lima">Lima</option>
+                        </select>
+                        <select id="distU" placeholder="Distrito" required>
+                            <option value="" selected disabled>Elige un distrito</option>
+                            <option value="Ancón">Ancón</option>
+                            <option value="Ate">Ate</option>
+                            <option value="Barranco">Barranco</option>
+                            <option value="Breña">Breña</option>
+                            <option value="Carabayllo">Carabayllo</option>
+                            <option value="Cercado de Lima">Cercado de Lima</option>
+                            <option value="Chaclacayo">Chaclacayo</option>
+                            <option value="Chorrillos">Chorrillos</option>
+                            <option value="Cieneguilla">Cieneguilla</option>
+                            <option value="Comas">Comas</option>
+                            <option value="El agustino">El agustino</option>
+                            <option value="Independencia">Independencia</option>
+                            <option value="Jesús maría">Jesús maría</option>
+                            <option value="La molina">La molina</option>
+                            <option value="La victoria">La victoria</option>
+                            <option value="Lince">Lince</option>
+                            <option value="Los olivos">Los olivos</option>
+                            <option value="Lurigancho">Lurigancho</option>
+                            <option value="Lurín">Lurín</option>
+                            <option value="Magdalena del mar">Magdalena del mar</option>
+                            <option value="Miraflores">Miraflores</option>
+                            <option value="Pachacámac">Pachacámac</option>
+                            <option value="Pucusana">Pucusana</option>
+                            <option value="Pueblo libre">Pueblo libre</option>
+                            <option value="Puente piedra">Puente piedra</option>
+                            <option value="Punta hermosa">Punta hermosa</option>
+                            <option value="Punta negra">Punta negra</option>
+                            <option value="Rímac">Rímac</option>
+                            <option value="San bartolo">San bartolo</option>
+                            <option value="San borja">San borja</option>
+                            <option value="San isidro">San isidro</option>
+                            <option value="San Juan de Lurigancho">San Juan de Lurigancho</option>
+                            <option value="San Juan de Miraflores">San Juan de Miraflores</option>
+                            <option value="San Luis">San Luis</option>
+                            <option value="San Martin de Porres">San Martin de Porres</option>
+                            <option value="San Miguel">San Miguel</option>
+                            <option value="Santa Anita">Santa Anita</option>
+                            <option value="Santa María del Mar">Santa María del Mar</option>
+                            <option value="Santa Rosa">Santa Rosa</option>
+                            <option value="Santiago de Surco">Santiago de Surco</option>
+                            <option value="Surquillo">Surquillo</option>
+                            <option value="Villa el Salvador">Villa el Salvador</option>
+                            <option value="Villa Maria del Triunfo">Villa Maria del Triunfo</option>
+                        </select>
+                    </div>
+
+                    <a class="btn-form" onclick="agregarDatos();">Registrar Datos</a>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="JS/mensaje.js"></script>
+
+</body>
+
+</html>

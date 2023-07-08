@@ -1,0 +1,338 @@
+:root{
+    --colorTexto:  #49454567;
+}
+
+body{
+    margin: 0;
+    font-family: sans-serif;
+
+    background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);
+    background: linear-gradient(to right, #B06AB3, #4568DC);
+}
+
+
+
+
+/*
+===================================================
+====================== BARRA ======================
+===================================================
+*/
+header{
+    width: 100%;
+    background-color: white;
+}
+
+
+#btn-menu{
+    display: none;
+}
+
+
+header .menu-icon{
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    height: 5ch;
+
+    font-weight: bold;
+    font-size: 30px;
+    color: black;
+
+    border: 3px solid black;
+}
+
+header .menu-icon:hover{
+    cursor: pointer;
+
+    color: black;
+    font-style: italic;
+
+    background: rgba(0, 0, 0, 0.1);
+}
+
+
+.menu ul{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+
+    display: flex;
+
+    border-bottom: 3px solid black;
+
+}
+
+
+.menu li{
+    text-align: center;
+
+    flex-grow: 1;
+
+    border-right: 3px solid black;
+}
+
+
+
+.menu li:hover{
+    background: rgb(102, 102, 102);
+    font-style: italic;
+}
+
+
+.menu li a{
+    display: block;
+    padding: 15px 20px;
+
+    font-weight: bold;
+
+    color: black;
+
+    text-decoration: none;
+}
+
+.menu li a:hover{
+    color: white;
+}
+
+.menu .blocked a{
+    color: rgb(106,35,221); 
+    font-style: italic; 
+    cursor: default; 
+    pointer-events: none;
+}
+
+.menu .blocked:hover{
+    background-color: white;
+}
+
+/*
+===================================================
+===================================================
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+===================================================
+=================== FORMULARIO ====================
+===================================================
+*/
+.cuerpo{
+    width: 100%;
+
+    margin-top: 70px;
+
+    height: 650px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    text-align: center;
+    font-weight: 700;
+}
+
+
+.form{
+    background: white;
+    padding: 40px 0;
+    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+
+    width: 100%;
+    margin: auto;
+}
+
+
+.form .grupo{
+    position: relative;
+    margin: 45px ;
+}
+
+
+input{
+    background: none;
+    color: #c6c6c6;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--colorTexto);
+}
+
+
+input:focus{
+    outline: none;
+    color: rgba(94, 91, 93, 1.0);
+}
+
+
+
+.label-form{
+    color: rgba(94, 91, 93, 1.0);
+    font-size: 16px;
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    top: 10px;
+    transition: 0.5s ease all;
+    pointer-events: none;
+}
+
+input:focus~.label-form,
+input:valid~.label-form{
+    top:  -14px;
+    font-size: 12px;
+    color: #2196F3;
+}
+
+
+.barra{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.barra::before{
+    content: "";
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(to right, #B06AB3, #4568DC);
+    transition: 0.3s ease width;
+    left: 0;
+}
+
+
+input:focus~.barra::before{
+    width: 100%;
+}
+
+
+select{
+    display: block;
+
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 10px 10px 5px;
+
+    color: #c6c6c6;
+    font-size: 18px;
+
+    background: none;
+    border-radius: 1px;
+    border: none;
+    border-bottom: 1px solid var(--colorTexto);
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
+select:focus{
+    outline: none;
+    background: transparent;
+    color: rgba(94, 91, 93, 1.0);
+}
+
+select:focus~.label-form,
+select:valid~.label-form{
+    top:  -14px;
+    font-size: 12px;
+    color: #2196F3;
+}
+
+select:focus~.barra::before{
+    width: 100%;
+}
+
+
+.botones{
+    font-family: 'Roboto';
+    background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);
+    background: linear-gradient(to right, #B06AB3, #4568DC);
+
+    border: none;
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    color: white;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+
+    text-align: center;
+    padding-top: 25px;
+}
+
+
+.botones:hover{
+    background: #734E4E;
+}
+
+
+/*
+===================================================
+===================================================
+*/
+
+
+@media (max-width:930px){
+    header{
+        position: fixed;
+
+        margin-top: -90px;
+        z-index: 1000;
+    }
+
+    .cuerpo{
+        margin-top: 90px;
+    }
+
+    header .menu-icon{
+        display: flex;
+    }
+
+    .menu{
+        position: absolute;
+        background: white;
+
+        width: 100%;
+        margin-left: -100%;
+        transition: all 1s;
+    }
+
+    .menu ul{
+        flex-direction: column;
+        border: none;
+    }
+
+    .menu li{
+        border: none;
+        border-bottom: 2px solid black;
+    }
+
+    #btn-menu:checked ~ .menu{
+        margin: 0;
+    }
+}
+
